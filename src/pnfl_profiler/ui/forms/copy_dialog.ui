@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CopyDialog</class>
+ <widget class="QDialog" name="CopyDialog">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>720</width><height>460</height></rect>
+  </property>
+  <property name="windowTitle"><string>Copy Situation To:</string></property>
+  <layout class="QVBoxLayout" name="outerLayout">
+   <item>
+    <layout class="QGridLayout" name="bucketsLayout">
+     <item row="0" column="0">
+      <widget class="QGroupBox" name="minutesBox">
+       <property name="title"><string>Minutes in half:</string></property>
+       <layout class="QVBoxLayout" name="minutesLayout">
+        <item><widget class="QCheckBox" name="checkMinutesOverFive"><property name="text"><string>&gt;5</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkMinutesTwoToFive"><property name="text"><string>&gt;2-5</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkMinutesOneToTwo"><property name="text"><string>&gt;1-2</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkMinutesFifteenSecToOne"><property name="text"><string>&gt;:15-1</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkMinutesZeroToFifteenSec"><property name="text"><string>0-:15</string></property></widget></item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QGroupBox" name="downBox">
+       <property name="title"><string>Down:</string></property>
+       <layout class="QVBoxLayout" name="downLayout">
+        <item><widget class="QCheckBox" name="checkDownFirst"><property name="text"><string>1</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkDownSecond"><property name="text"><string>2</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkDownThird"><property name="text"><string>3</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkDownFourth"><property name="text"><string>4</string></property></widget></item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QGroupBox" name="yardsBox">
+       <property name="title"><string>Yards to go:</string></property>
+       <layout class="QVBoxLayout" name="yardsLayout">
+        <item><widget class="QCheckBox" name="checkYardsZeroToOne"><property name="text"><string>0-1</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkYardsTwoToFive"><property name="text"><string>2-5</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkYardsSixToTen"><property name="text"><string>6-10</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkYardsOverTen"><property name="text"><string>&gt;10</string></property></widget></item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QGroupBox" name="fieldBox">
+       <property name="title"><string>Field Position:</string></property>
+       <layout class="QVBoxLayout" name="fieldLayout">
+        <item><widget class="QCheckBox" name="checkFieldInsideDef5"><property name="text"><string>&lt;DEF 5</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkFieldDef5ToDef35"><property name="text"><string>DEF 5 - DEF 35</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkFieldDef35ToOff35"><property name="text"><string>DEF 35 - OFF 35</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkFieldOff35ToOff5"><property name="text"><string>OFF 35 - OFF 5</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkFieldInsideOff5"><property name="text"><string>&lt;OFF 5</string></property></widget></item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QGroupBox" name="spreadBox">
+       <property name="title"><string>Point Spread:</string></property>
+       <layout class="QVBoxLayout" name="spreadLayout">
+        <item><widget class="QCheckBox" name="checkSpreadAheadEightOrMore"><property name="text"><string>Ahead by 8+</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkSpreadAheadFourToSeven"><property name="text"><string>Ahead by 4-7</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkSpreadAheadOneToThree"><property name="text"><string>Ahead by 1-3</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkSpreadTied"><property name="text"><string>Tied</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkSpreadBehindOneToThree"><property name="text"><string>Behind by 1-3</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkSpreadBehindFourToSeven"><property name="text"><string>Behind by 4-7</string></property></widget></item>
+        <item><widget class="QCheckBox" name="checkSpreadBehindEightOrMore"><property name="text"><string>Behind by 8+</string></property></widget></item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="whatToCopyBox">
+     <property name="title"><string>What to Copy?</string></property>
+     <layout class="QHBoxLayout" name="whatToCopyLayout">
+      <item><widget class="QCheckBox" name="checkPlays"><property name="text"><string>Plays</string></property><property name="checked"><bool>true</bool></property></widget></item>
+      <item><widget class="QCheckBox" name="checkClock"><property name="text"><string>Clock</string></property><property name="checked"><bool>true</bool></property></widget></item>
+      <item><spacer name="whatToCopySpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+     </layout>
+    </widget>
+   </item>
+   <item><widget class="QLabel" name="countLabel"><property name="text"><string>Situations: 0</string></property></widget></item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons"><set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set></property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection><sender>buttonBox</sender><signal>accepted()</signal><receiver>CopyDialog</receiver><slot>accept()</slot></connection>
+  <connection><sender>buttonBox</sender><signal>rejected()</signal><receiver>CopyDialog</receiver><slot>reject()</slot></connection>
+ </connections>
+</ui>

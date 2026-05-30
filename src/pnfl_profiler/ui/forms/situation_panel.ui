@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SituationPanel</class>
+ <widget class="QGroupBox" name="SituationPanel">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>820</width><height>460</height></rect>
+  </property>
+  <property name="title"><string>Situation</string></property>
+  <layout class="QVBoxLayout" name="outerLayout">
+   <item>
+    <layout class="QHBoxLayout" name="headerLayout">
+     <item><widget class="QLabel" name="situationNumberCaption"><property name="text"><string>Situation #</string></property></widget></item>
+     <item><widget class="QLabel" name="situationNumberLabel"><property name="text"><string>—</string></property></widget></item>
+     <item><spacer name="headerSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+     <item><widget class="QCheckBox" name="stopClockCheck"><property name="text"><string>Stop Clock?</string></property></widget></item>
+     <item><widget class="QPushButton" name="closeButton"><property name="text"><string>✕</string></property><property name="toolTip"><string>Remove this panel</string></property><property name="maximumSize"><size><width>28</width><height>16777215</height></size></property></widget></item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="bucketsLayout">
+     <item row="0" column="0">
+      <widget class="QGroupBox" name="minutesBox">
+       <property name="title"><string>Minutes in half:</string></property>
+       <layout class="QVBoxLayout" name="minutesLayout">
+        <item><widget class="QRadioButton" name="radioMinutesOverFive"><property name="text"><string>&gt;5</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioMinutesTwoToFive"><property name="text"><string>&gt;2-5</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioMinutesOneToTwo"><property name="text"><string>&gt;1-2</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioMinutesFifteenSecToOne"><property name="text"><string>&gt;:15-1</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioMinutesZeroToFifteenSec"><property name="text"><string>0-:15</string></property></widget></item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QGroupBox" name="downBox">
+       <property name="title"><string>Down:</string></property>
+       <layout class="QVBoxLayout" name="downLayout">
+        <item><widget class="QRadioButton" name="radioDownFirst"><property name="text"><string>1</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioDownSecond"><property name="text"><string>2</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioDownThird"><property name="text"><string>3</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioDownFourth"><property name="text"><string>4</string></property></widget></item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QGroupBox" name="yardsBox">
+       <property name="title"><string>Yards to go:</string></property>
+       <layout class="QVBoxLayout" name="yardsLayout">
+        <item><widget class="QRadioButton" name="radioYardsZeroToOne"><property name="text"><string>0-1</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioYardsTwoToFive"><property name="text"><string>2-5</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioYardsSixToTen"><property name="text"><string>6-10</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioYardsOverTen"><property name="text"><string>&gt;10</string></property></widget></item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QGroupBox" name="spreadBox">
+       <property name="title"><string>Point Spread:</string></property>
+       <layout class="QVBoxLayout" name="spreadLayout">
+        <item><widget class="QRadioButton" name="radioSpreadAheadEightOrMore"><property name="text"><string>Ahead by 8+</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioSpreadAheadFourToSeven"><property name="text"><string>Ahead by 4-7</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioSpreadAheadOneToThree"><property name="text"><string>Ahead by 1-3</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioSpreadTied"><property name="text"><string>Tied</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioSpreadBehindOneToThree"><property name="text"><string>Behind by 1-3</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioSpreadBehindFourToSeven"><property name="text"><string>Behind by 4-7</string></property></widget></item>
+        <item><widget class="QRadioButton" name="radioSpreadBehindEightOrMore"><property name="text"><string>Behind by 8+</string></property></widget></item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item><widget class="QLabel" name="fieldPositionLabel"><property name="text"><string>Field Position: —</string></property></widget></item>
+   <item>
+    <layout class="QGridLayout" name="playsLayout">
+     <item row="0" column="0"><widget class="QLabel" name="playsHeaderPlay"><property name="text"><string>Selected Play</string></property></widget></item>
+     <item row="0" column="1"><widget class="QLabel" name="playsHeaderWeight"><property name="text"><string>Weight</string></property></widget></item>
+     <item row="0" column="2"><widget class="QLabel" name="playsHeaderPercent"><property name="text"><string>%</string></property></widget></item>
+     <item row="1" column="0"><widget class="QComboBox" name="categoryCombo1"/></item>
+     <item row="1" column="1"><widget class="QSpinBox" name="weightSpin1"><property name="maximum"><number>10</number></property></widget></item>
+     <item row="1" column="2"><widget class="QLabel" name="percentLabel1"><property name="text"><string>0%</string></property></widget></item>
+     <item row="2" column="0"><widget class="QComboBox" name="categoryCombo2"/></item>
+     <item row="2" column="1"><widget class="QSpinBox" name="weightSpin2"><property name="maximum"><number>10</number></property></widget></item>
+     <item row="2" column="2"><widget class="QLabel" name="percentLabel2"><property name="text"><string>0%</string></property></widget></item>
+     <item row="3" column="0"><widget class="QComboBox" name="categoryCombo3"/></item>
+     <item row="3" column="1"><widget class="QSpinBox" name="weightSpin3"><property name="maximum"><number>10</number></property></widget></item>
+     <item row="3" column="2"><widget class="QLabel" name="percentLabel3"><property name="text"><string>0%</string></property></widget></item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonRow">
+     <item><spacer name="buttonRowSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+     <item><widget class="QPushButton" name="copyButton"><property name="text"><string>COPY</string></property></widget></item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

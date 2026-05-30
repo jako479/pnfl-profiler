@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pnfl-profiler"
 version = "0.1.0"
-description = "Editor for Front Page Sports Football Pro '98 coachine profiles (.prf)."
+description = "PySide6 desktop editor for Front Page Sports Football Pro '98 coaching profiles (.prf)."
 authors = [{ name = "Brian Jacobs" }]
 readme = "README.md"
 license = "MIT"
@@ -20,8 +20,14 @@ dev = ["pytest", "pyright==1.1.409", "ruff", "ipython"]
 Homepage = "https://github.com/jako479/pnfl-profiler.git"
 Repository = "https://github.com/jako479/pnfl-profiler.git"
 
+[project.entry-points."pnfl.commands"]
+edit-profile = "pnfl_profiler.cli:main"
+
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"pnfl_profiler.ui.forms" = ["*.ui"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -30,6 +36,7 @@ addopts = "-ra --strict-markers --strict-config"
 [tool.ruff]
 line-length = 88
 target-version = "py313"
+extend-exclude = ["src/pnfl_profiler/ui/forms/*_ui.py"]
 
 [tool.ruff.lint]
 select = [
@@ -63,6 +70,7 @@ exclude = [
     "**/node_modules",
     "**/output",
     "**/venv",
+    "src/pnfl_profiler/ui/forms/*_ui.py",
 ]
 extraPaths = ["src"]
 typeCheckingMode = "standard"

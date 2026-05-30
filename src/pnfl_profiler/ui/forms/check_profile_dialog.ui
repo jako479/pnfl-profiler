@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CheckProfileDialog</class>
+ <widget class="QDialog" name="CheckProfileDialog">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>520</width><height>360</height></rect>
+  </property>
+  <property name="windowTitle"><string>Check Profile</string></property>
+  <layout class="QVBoxLayout" name="outerLayout">
+   <item><widget class="QLabel" name="headerLabel"><property name="text"><string/></property></widget></item>
+   <item><widget class="QTextEdit" name="bodyText"><property name="readOnly"><bool>true</bool></property></widget></item>
+   <item>
+    <layout class="QHBoxLayout" name="navLayout">
+     <item><widget class="QPushButton" name="prevButton"><property name="text"><string>← Prev</string></property></widget></item>
+     <item><widget class="QPushButton" name="nextButton"><property name="text"><string>Next →</string></property></widget></item>
+     <item><spacer name="navSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+     <item><widget class="QPushButton" name="jumpButton"><property name="text"><string>Jump to situation</string></property></widget></item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons"><set>QDialogButtonBox::Close</set></property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection><sender>buttonBox</sender><signal>rejected()</signal><receiver>CheckProfileDialog</receiver><slot>reject()</slot></connection>
+ </connections>
+</ui>

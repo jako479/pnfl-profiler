@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FieldPositionPane</class>
+ <widget class="QWidget" name="FieldPositionPane">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>320</width><height>720</height></rect>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <widget class="QLabel" name="headerLabel">
+     <property name="text"><string>&lt;Field Position&gt;</string></property>
+     <property name="textFormat"><enum>Qt::RichText</enum></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="addButton">
+     <property name="text"><string>+ Add edit panel</string></property>
+     <property name="enabled"><bool>false</bool></property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="panelContainerLayout"/>
+   </item>
+   <item>
+    <spacer name="paneBottomSpacer">
+     <property name="orientation"><enum>Qt::Vertical</enum></property>
+     <property name="sizeHint" stdset="0">
+      <size><width>20</width><height>40</height></size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
